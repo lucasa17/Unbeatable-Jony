@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1ounkllv70vn"]
+
+[ext_resource type="Script" path="res://Cenas/inimigo_spawner.gd" id="1_asrqj"]
+
+[node name="InimigoSpawner" type="Node2D"]
+script = ExtResource("1_asrqj")
+
+[node name="Marker2DN1" type="Marker2D" parent="."]
+position = Vector2(360, -50)
+
+[node name="Marker2DN2" type="Marker2D" parent="."]
+position = Vector2(405, -50)
+
+[node name="Marker2DN3" type="Marker2D" parent="."]
+position = Vector2(450, -50)
+
+[node name="Marker2DO1" type="Marker2D" parent="."]
+position = Vector2(-50, 350)
+
+[node name="Marker2DO2" type="Marker2D" parent="."]
+position = Vector2(-50, 395)
+
+[node name="Marker2DO3" type="Marker2D" parent="."]
+position = Vector2(-50, 440)
+
+[node name="Marker2DS1" type="Marker2D" parent="."]
+position = Vector2(360, 866)
+
+[node name="Marker2DS2" type="Marker2D" parent="."]
+position = Vector2(405, 866)
+
+[node name="Marker2DS3" type="Marker2D" parent="."]
+position = Vector2(450, 866)
+
+[node name="Marker2DE1" type="Marker2D" parent="."]
+position = Vector2(866, 350)
+
+[node name="Marker2DE2" type="Marker2D" parent="."]
+position = Vector2(866, 395)
+
+[node name="Marker2DE3" type="Marker2D" parent="."]
+position = Vector2(866, 440)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
