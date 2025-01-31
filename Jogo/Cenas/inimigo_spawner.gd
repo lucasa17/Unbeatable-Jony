@@ -47,7 +47,8 @@ func _on_timer_timeout():
 			goblin.add_to_group("enemies")
 			
 	if enemies.size() == get_parent().max_enemies:
-		cont += 1
+		cont = cont+1
 
 func  hit():
 	hit_p.emit()
+	cont = cont-1
