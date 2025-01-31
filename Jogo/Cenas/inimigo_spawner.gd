@@ -51,4 +51,5 @@ func _on_timer_timeout():
 
 func  hit():
 	hit_p.emit()
-	cont = cont-1
+	if enemies.size() < get_parent().max_enemies:
+		cont = cont-1
