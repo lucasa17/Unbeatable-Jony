@@ -32,14 +32,14 @@ func _on_timer_timeout():
 			main.add_child(goblin)
 			goblin.add_to_group("enemies")
 			
-		if cont > 4 and cont <= 8:
+		if cont > 4 and cont <= 15:
 			var goblin = goblin_scene2.instantiate()
 			goblin.position = spawn.position
 			goblin.hit_player.connect(hit)
 			main.add_child(goblin)
 			goblin.add_to_group("enemies")
 			
-		if cont > 8:
+		if cont > 15:
 			var goblin = goblin_scene3.instantiate()
 			goblin.position = spawn.position
 			goblin.hit_player.connect(hit)
