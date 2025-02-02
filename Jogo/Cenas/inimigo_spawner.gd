@@ -25,26 +25,27 @@ func _on_timer_timeout():
 		#pega um local aleatorio par spawnar o inimigo
 		var spawn = spawn_points[randi() % spawn_points.size()]
 		#spawna um inimigo
-		if Fase01.wave <= 4  :
+		cont = randi_range(0,1)
+		if cont == 0  :
 			var goblin = goblin_scene.instantiate()
 			goblin.position = spawn.position
 			goblin.hit_player.connect(hit)
 			main.add_child(goblin)
 			goblin.add_to_group("enemies")
 			
-		if Fase01.wave > 4 and Fase01.wave <= 8:
+		if cont == 1:
 			var goblin = goblin_scene2.instantiate()
 			goblin.position = spawn.position
 			goblin.hit_player.connect(hit)
 			main.add_child(goblin)
 			goblin.add_to_group("enemies")
-			
-		if cont > 8:
-			var goblin = goblin_scene3.instantiate()
-			goblin.position = spawn.position
-			goblin.hit_player.connect(hit)
-			main.add_child(goblin)
-			goblin.add_to_group("enemies")
+		
+		#if cont > 8:
+		#	var goblin = goblin_scene3.instantiate()
+		#	goblin.position = spawn.position
+		#	goblin.hit_player.connect(hit)
+		#	main.add_child(goblin)
+		#	goblin.add_to_group("enemies")
 			
 
 func  hit():
